@@ -1,0 +1,120 @@
+
+<template name="mainPage">
+ <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <!--<div class="intro-heading">Day With A Local</div>!-->
+                        <div class="intro-lead-in">An Experience Beyond Tourism</div>
+                <a href="#about" class="btn btn-contrast btn-large how-it-works page-scroll btn btn-xl">How It Works</a>
+                </div>
+      
+      
+      </div>
+         <div class="bottom-search-area">
+      <div class="col-12">
+        <form action="/s" id="search_form">
+          <div class="location-wrapper"><input type="text" id="pac-input2" class="form-inline location input-large input-contrast" autocomplete="off" id="location" name="location" placeholder="Where do you want to go?"/> 
+     
+          <button type="submit" class="search-button form-inline btn btn-primary btn-large" id="submit_location">
+            Search
+          </button>
+               </div>
+        </form>
+      </div>
+    </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">How it Works</h2>
+                    <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>!-->
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-star  fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Have Unique Experiences</h4>
+                    <p class="text-muted">We are passionate about our state and want visitors to have a great experience beyond the average tourist events. We work to match you with a local host to take you on the adventure of your choice. Offering a range of experiences that will give you a great feel of the area and why we love to live here! We can show you the great places to see and eat that may not show up on an internet search.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-location-arrow fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Browse Experiences Near Your Destination</h4>
+                    <p class="text-muted">Type in your destination above to see available experiences nearby.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                   <h4 class="service-heading">Secure Transactions</h4>
+                    <p class="text-muted">All payments are processed using secure methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Featured Guides</h2>
+                    <h3 class="section-subheading text-muted">Some of Our Highest Rated Guides</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/guidePhotos/alan.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Alan</h4>
+                        <p class="text-muted">Architectural History professional, offering exciting and educational walk abouts in Portland and Auburn</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/guidePhotos/kim.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Kim</h4>
+                        <p class="text-muted">Life Long Mainer, Kim's grandfather had a Market for over 40 years in Portland and whose daughter now runs a restaurant on the East End. Join Kim on a friendly delicious tour!</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/guidePhotos/nancy.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Nancy</h4>
+                        <p class="text-muted">Nancy loves the outdoors and is the leader of the largest outdoor adventure organization in the state. She can lead hiking, biking, and other outdoor experiences.</p>
+                    </div>
+                </div>
+        </div>
+    </section>
+</template>
