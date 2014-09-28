@@ -28,7 +28,7 @@ Meteor.methods({
       title: "placeholder",
       description: "description goes here",
       location: [],
-      dates [],
+      dates: [],
       guideId: user._id, 
       author: user.username, 
       submitted: new Date().getTime(),

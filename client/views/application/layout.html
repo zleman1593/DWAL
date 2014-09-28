@@ -1,6 +1,5 @@
 <template name="layout">
-{{>connectionBanner}}
-<a href="#page-top"><img src="/Logo.png" class="logo"></a>
+<img src="/Logo.png" class="logo">
  {{> header}}
 
   <div class="container-fluid">
@@ -31,17 +30,15 @@
                     <ul class="list-inline social-buttons">
                         <li><a href="https://twitter.com/DayLocal"><i class="fa fa-twitter"></i></a>
                         </li>
-                        <li><a href="https://www.facebook.com/daywithalocal"><i class="fa fa-facebook"></i></a>
+                        <li><a href="https://www.facebook.com/daywithalocal"><i class="fa fa-facebook"></i></a> </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="{{pathFor 'termsandconditions'}}">Terms of Service and Privacy Policy/a>
-                        </li>
+                        <li><a href="{{pathFor 'termsandconditions'}}">Terms of Service and Privacy Policy </a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-</footer>
 </template>
