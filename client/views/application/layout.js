@@ -1,13 +1,20 @@
 
+Template.layout.helpers({
+  'loggedIn': function() {
+return !! Meteor.user();
 
+},
+});
 
 
 Template.layout.events({
-'click #logOut': function(e) {
-    e.preventDefault();
-Meteor.logout();
-}
 
+
+'click .logOut': function(e) {
+    e.preventDefault();
+    Router.go('initialMenu');
+Meteor.logout();
+},
 
 
 });

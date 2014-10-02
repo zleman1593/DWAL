@@ -1,22 +1,13 @@
-Meteor.publish('Experiences', function(school, options) {
+Meteor.publish('Experiences', function(options) {
   //return Posts.find({flagCount: {$lt: 5}, school: school }, options);
-  return Experience.find({}, options);
+  //return Experience.find(options);
+  return Experience.find(options);
+  //return Experience.find({"loc": {type:"Point"}});
+  //return Experience.find({ _id: "PhQQprPrFzRTMkKRW"});
+  //return Experience.find({"loc.type":"Point"});
+   //return Experience.find({$near: [-69.963793,43.906732], $maxDistance:60000});
+//return Experience.find({});
 });
-
-/*
-Meteor.publish('postsWithPhotos', function(school, options) {
-
-
-var posts = Posts.find({flagCount: {$lt: 5}, school: school }, options);
- var postIds = posts.map(function(p) { return p._id });
-console.log(postIds);
-var test = Photos.find({postId: {$in: postIds}});
-  return [
-posts,test]
-});
-*/
-
-
 
 
 Meteor.publish('singleExperience', function(id) {
@@ -42,10 +33,11 @@ Meteor.publish('photosWithPhotoId', function(photoId) {
 
 Accounts.onCreateUser(function(options, user) {
  
-var emailInfo = _.find(user.emails, function(thisEmail) { return thisEmail });
-var email =  emailInfo["address"];
-var plannedFutureExperiences = [];
-var wishListExperiences = [];
+//var emailInfo = _.find(user.emails, function(thisEmail) { return thisEmail });
+//var email =  emailInfo["address"];
+ user.plannedFutureExperiences = [];
+ user.wishListExperiences = [];
+user.name = '';
 return user;
 });
 
@@ -54,7 +46,7 @@ return user;
 Meteor.publish("userData", function () {
   if (this.userId) {
     return Meteor.users.find({_id: this.userId},
-                              {fields: {'plannedFutureExperiences': 1, 'wishListExperiences': 1}});
+                              {fields: {'name': 1,'plannedFutureExperiences': 1, 'wishListExperiences': 1}});
                           
   } else {
     this.ready();

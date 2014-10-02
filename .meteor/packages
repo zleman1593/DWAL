@@ -15,5 +15,9 @@ meteorhacks:kadira
 meteorhacks:subs-manager
 reactive-var
 pfafman:font-awesome-4
-
+aldeed:autoform
+aldeed:collection2
+cfs:standard-packages
+cfs:gridfs
+meteorhacks:fast-render
 

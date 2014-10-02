@@ -4,6 +4,14 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
+.becomeGuide{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 10px;
+}
+
+
 input#pac-input2 {
 min-width: 300px;
 width:40%; 
@@ -18,12 +26,6 @@ width:40%;
  .navbar-nav>li>a {
  //padding-top: 5px; 
  padding-bottom: 5px; 
-}
-.btn-contrast:hover, .btn-contrast:focus {
-border-color: #676c6e;
-border-bottom-color: #444749;
-background-color: #676c6e;
-color: #fff;
 }
 .btn-large {
 padding: 9px 27px;
@@ -84,7 +86,7 @@ margin-top:8px;
     display: none;
 }
 footer {
-background-color: darkcyan;
+background-color: rgb(125, 165, 165);
 }
 
 section#about {
@@ -212,11 +214,21 @@ h6 {
     font-weight: 400;
     letter-spacing: 1px;
 }
+@media(min-width:768px) {
 .blackNavbarLinks{
     color: black !important;
 }
 .whiteNavbarLinks{
     color: white !important;
+}
+}
+@media(max-width:767px) {
+    .blackNavbarLinks{
+color: white !important;
+}
+     .whiteNavbarLinks{
+color: white !important;
+}
 }
 
 
@@ -247,6 +259,14 @@ h6 {
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+     .navbar-default.navbar-shrink-perm {
+        padding: 0px 0;
+        background-color: #222;
+    }
+
+    .navbar-default.navbar-shrink-perm .navbar-brand {
         font-size: 1.5em;
     }
 }

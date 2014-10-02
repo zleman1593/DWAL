@@ -1,9 +1,49 @@
 Experience = new Meteor.Collection('experience');
+Experience2 = new Meteor.Collection('experience2');
+//If this doesnt work this command  needs to runn his command in mongo
+//db.Experience.ensureIndex( { loc: "2dsphere" });
 
-Experience.allow({
+Experience2.allow({
   update: ownsDocument,
   remove: ownsDocument
 });
+Experience2.attachSchema(new SimpleSchema({
+  title: {
+    type: String,
+    label: "Title",
+    max: 200
+  },
+  description: {
+    type: String,
+    label: "Description of Experience",
+    max: 1000
+  },
+   hourlyRate: {
+    type: Number,
+    label: "Hourly rate",
+     max: 500
+  },
+
+}));
+
+useIt = new SimpleSchema({
+  title: {
+    type: String,
+    label: "Title",
+    max: 200
+  },
+  description: {
+    type: String,
+    label: "Description of Experience",
+    max: 1000
+  },
+   hourlyRate: {
+    type: Number,
+    label: "Hourly rate",
+     max: 500
+  },
+});
+
 
 Experience.deny({
   update: function(userId, post, fieldNames) {
@@ -14,29 +54,33 @@ Experience.deny({
 
 Meteor.methods({
 
-  post: function(postAttributes,photoId) {
+  post: function(postAttributes) {
     var user = Meteor.user();
+    //check(postAttributes, useIt);
     
     
     // ensure the user is logged in
     if (!user)
       throw new Meteor.Error(401, "You need to login to submit an Experience");
     
+
+    //place = Session.get("meetLocation");
     
     // pick out the whitelisted keys
-    var post = _.extend(_.pick(postAttributes,'confession','photoId'), {
-      title: "placeholder",
-      description: "description goes here",
-      location: [],
-      dates: [],
+    var post = _.extend(postAttributes, {
+      //dates: [],
       guideId: user._id, 
-      author: user.username, 
+    author: user.name, 
       submitted: new Date().getTime(),
       reviewCount: 0,
       deleted: false,
+        away: false,
       reviews: 0,
+     // loc: { type: "Point", coordinates: [ place.geometry.location.B, place.geometry.location.k ] },
     });
-    
+    console.log(post);
+
+//post2 = _.pick(post, 'title', 'guideId');
     var postId = Experience.insert(post);
 
     return postId;

@@ -1,7 +1,7 @@
 var POST_HEIGHT = 250;
 var Positions = new Meteor.Collection(null);
 
-Template.postItem.rendered = function() {
+Template.experience.rendered = function() {
   if(!Session.get('loadingMore')){
     if (Router.current().route.name    !== 'postPage'){
     Session.set('numberOfNewPost',Session.get('numberOfNewPost')+1);
@@ -29,7 +29,7 @@ var   handler = $('.myElements');
 };
 
 
-Template.postItem.helpers({
+Template.experience.helpers({
 
 
   removeWookMarkOnSmallScreen: function() {
@@ -53,38 +53,6 @@ return 'myElements';
     },
 
 
- photoexistClass: function () {
-
-      if(this.photoId != ''){
- return 'photoExists';
-}
-        return '';
-    },
-
- photoexist: function () {
-
-      if(this.photoId != ''){
- //Meteor.subscribe('photos',this.photoId);
-  Session.set('photoForItem', this.photoId);
- return true;
-}
-        return false;
-    },
-
-  activeRoute: function() {
-   /* var args = Array.prototype.slice.call(arguments, 0);
-    args.pop();
-    
-    var active = _.any(args, function(name) {
-      return Router.current() && Router.current().route.name === name
-    });*/
-    
-if (Router.current().route.name    === 'postPage'){
-  return false;
-} else{
-    return true;
-  }
-  },
 
 
 date: function date(){
@@ -112,14 +80,6 @@ comments: function() {
   },
 
 
-SinglepagePhotoMargin : function() {
-if (Router.current().route.name    === 'postPage'){
-
-      return 'SinglepagePhotoMargin';
-    } else {
-      return  '';
-    }
-  },
 
   upvotedClass: function() {
     var userId = Meteor.userId();
@@ -149,13 +109,7 @@ if (Router.current().route.name    === 'postPage'){
   },
 
      postWidth: function() {
-   
-if (Router.current().route.name    === 'postPage'){
-     return '';
-    } else {
-        return 'post-width';
-    
-    }
+
   },
   attributes: function() {
   /*  var post = _.extend({}, Positions.findOne({postId: this._id}), this);
@@ -180,7 +134,7 @@ if (Router.current().route.name    === 'postPage'){
   }
 });
 
-Template.postItem.events({
+Template.experience.events({
 
 
 'click .removalRequest': function(e) {

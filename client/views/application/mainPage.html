@@ -13,14 +13,15 @@
       </div>
          <div class="bottom-search-area">
       <div class="col-12">
-        <form action="/s" id="search_form">
+ 
           <div class="location-wrapper"><input type="text" id="pac-input2" class="form-inline location input-large input-contrast" autocomplete="off" name="location" placeholder="Where do you want to go?"/> 
      
-          <button type="submit" class="search-button form-inline btn btn-primary btn-large" id="submit_location">
-            Search
+           <a href="{{pathFor 'nearbyExperiences'}}"> <button  href="{{pathFor 'nearbyExperiences'}}" class="search-button  btn btn-primary btn-large">
+          Search
           </button>
+          </a>
                </div>
-        </form>
+       
       </div>
     </div>
     </header>

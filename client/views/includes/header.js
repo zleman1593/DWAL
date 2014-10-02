@@ -1,4 +1,4 @@
-
+/*
 Meteor.startup(function(){
 
 Tracker.autorun(function () {
@@ -13,10 +13,60 @@ Session.set("CurrentNumberOfPostsLoaded", Posts.find({}).count());
 });
 
 });
-
+*/
 
 
 Template.header.helpers({
+
+'click .logOut': function(e) {
+    e.preventDefault();
+    Router.go('newPosts');
+Meteor.logout();
+},
+
+searchAppear: function() {
+
+
+if (Router.current().route.name  !== 'initialMenu'){
+      $(".logo").addClass("logoStay");
+      //$(".logo").removeClass("hideLogo");
+
+   setTimeout(doSomething, 500);
+
+function doSomething() {
+  initializeAuto();
+google.maps.event.addDomListener(window, 'load', initialize);
+}
+  return  true;
+} 
+$(".logo").removeClass("logoStay");
+  return false;
+
+
+},
+permDark: function() {
+
+if (Router.current().route.name  !== 'initialMenu'){
+  return  'navbar-shrink-perm';
+} 
+  return '';
+},
+
+permWhiteText: function() {
+
+if (Router.current().route.name  !== 'initialMenu'){
+  return  'whiteNavbarLinks';
+} 
+  return '';
+},
+
+
+  'loggedIn': function() {
+    alert(Meteor.userId());
+return !! Meteor.userId();
+
+},
+
 
 largeDetail: function() {
 
@@ -121,7 +171,6 @@ $(window).scrollTop(Session.get('previousScrollPosition'));
 },
 
 'click .navNewPosts': function(e) {
- Session.set('numberOfNewPost',0);
  $('.glyphicon-time').removeClass("symbols2");
        $('active').removeClass("red");
        $('html, body').animate({scrollTop:0}, 500);
@@ -156,3 +205,22 @@ function doSomething() {
 
     return $('footer').removeClass("hide");
 }
+
+
+
+
+function initializeAuto() {
+  var input = ( document.getElementById('pac-input2'));
+  var autocomplete = new google.maps.places.Autocomplete(input);
+  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+    var place = autocomplete.getPlace();
+    Session.set("selectedLocation", place);
+    
+});
+
+  };
+  
+
+
+
+

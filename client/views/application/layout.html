@@ -36,6 +36,10 @@
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
                         <li><a href="{{pathFor 'termsandconditions'}}">Terms of Service and Privacy Policy </a></li>
+                  {{#if currentUser}}
+                         <li><a class='logOut' >Log out</a></li>
+                        {{/if}}
+
                     </ul>
                 </div>
             </div>
