@@ -5,6 +5,9 @@
    <div class="page-header text-center">
   <h1>{{title}}</h1>
   <br>
+  {{#with image}}
+            <img src="{{this.url}}" alt="" class="img-responsive"/>
+       {{/with}}
   <small>{{hourlyRate}}</small>
 </div>
 

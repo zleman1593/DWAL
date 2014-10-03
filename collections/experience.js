@@ -1,7 +1,7 @@
 Experience = new Meteor.Collection('experience');
 Experience2 = new Meteor.Collection('experience2');
 //If this doesnt work this command  needs to runn his command in mongo
-//db.Experience.ensureIndex( { loc: "2dsphere" });
+//db.experience.ensureIndex( { loc: "2dsphere" });
 
 Experience2.allow({
   update: ownsDocument,
@@ -81,9 +81,13 @@ Meteor.methods({
     console.log(post);
 
 //post2 = _.pick(post, 'title', 'guideId');
-    var postId = Experience.insert(post);
+    var experienceId = Experience.insert(post);
 
-    return postId;
+
+ Images.update({_id: post.experienceMainPhoto._id}, {//cfs.images.filerecord
+      $set: {"experienceId": experienceId}}
+      );
+    return experienceId;
   },
   
   upvote: function(postId) {

@@ -9,6 +9,29 @@ Meteor.publish('Experiences', function(options) {
 //return Experience.find({});
 });
 
+Meteor.publish('experiencesWithPhotos', function(options){
+
+
+var posts = Experience.find(options);
+ var postIds = posts.map(function(p) { return p._id });
+console.log(postIds);
+var test = Images.find({experienceId: {$in: postIds}});
+  return [
+posts,test]
+});
+
+Meteor.publish('singleImage', function(postId) {
+  //return Images.find({});
+   return Images.find({experienceId:postId});
+});
+
+Meteor.publish('singleImageByOwnId', function(ownId) {
+   return Images.find({_id:ownId});
+});
+
+Meteor.publish('uploadedPhotos', function() {
+  return  Images.find({});
+});
 
 Meteor.publish('singleExperience', function(id) {
   return id && Experience.find(id);

@@ -31,6 +31,12 @@ var   handler = $('.myElements');
 
 Template.experience.helpers({
 
+  image: function () {
+  //  return Images.findOne(); // Where Images is an FS.Collection instance
+    return Images.findOne({'_id':this.experienceMainPhoto._id});// ,{sort: {"createdAt": -1}});
+  },
+
+
 
   removeWookMarkOnSmallScreen: function() {
    if( !Session.get('removeWookMarkOnSmallScreen')){

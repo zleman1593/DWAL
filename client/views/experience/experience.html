@@ -1,5 +1,8 @@
 <template name="experience">
    <div class="container">
+     {{#with image}}
+            <img src="{{this.url}}" alt="" class="img-responsive"/>
+       {{/with}}
          <li>
               <p>{{title}}</p>
         </li>

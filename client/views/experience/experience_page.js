@@ -10,6 +10,13 @@ if (Router.current().route.name   === 'experiencePage'  && this.userId == Meteor
     return false;
   }
   },
+
+    image: function () {
+  //  return Images.findOne(); // Where Images is an FS.Collection instance
+    return Images.findOne({'_id':this.experienceMainPhoto._id});// ,{sort: {"createdAt": -1}});
+  },
+
+
 });
 
 

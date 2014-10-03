@@ -34,6 +34,7 @@ place = Session.get("meetLocation");
 
 var docSubmit = _.extend(doc, {
       loc: { type: "Point", coordinates: [ place.geometry.location.B, place.geometry.location.k ] },
+      experienceMainPhoto: Session.get("imageId"),
     });
 
       	return docSubmit;
@@ -43,11 +44,28 @@ var docSubmit = _.extend(doc, {
 });
 
 Template.addExperience.events({
-  'click .fileUpload': function(event, template) {
+  'change .fileUpload': function(event, template) {
     FS.Utility.eachFile(event, function(file) {
-      Images.insert(file, function (err, fileObj) {
+      var imageId = Images.insert(file, function (err, fileObj) {
+        Session.set("imageId",imageId);
+        alert("Experience Image Uploaded!");
         //Inserted new doc with ID fileObj._id, and kicked off the data upload using HTTP
       });
     });
   }
 });
+
+
+Template.imageView.helpers({
+  image: function () {
+   // var experience = Experience.findOne();
+// This loads the data of the photo into event.photo
+// You can include it in your collection transform function.
+//var what = experience.experienceMainPhoto.getFileRecord();
+//alert(what);
+//alert(experience);
+    return Images.findOne(Session.get('imageId')); // Where Images is an FS.Collection instance
+  }
+});
+
+
