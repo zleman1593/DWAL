@@ -20,4 +20,5 @@ aldeed:collection2
 cfs:standard-packages
 cfs:gridfs
 meteorhacks:fast-render
+cfs:filesystem
 
