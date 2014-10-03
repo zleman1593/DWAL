@@ -1,3 +1,30 @@
 <template name="guideSignUp">
+<div class="container" style="margin-top: 200px">
+<label class="control-label" for="title">Profile Image to display</label>
+     <input type="file" class="fileUpload custom-file-input">
+     {{>profileImageView}}
+<label class="control-label" for="title">Your Area</label>
+  <div class="location-wrapper"><input type="text" id="formGuideLocation" class=" form-control formLocation location input-large input-contrast" autocomplete="off" name="location" placeholder="Select an area for youto turn up in location based search"/> 
+               </div>
 
+   {{#autoForm collection="Guides2" id="becomeGuideForm" type="method" meteormethod="becomeGuide"}}
+    <fieldset>
+      {{> afQuickField name='firstName'}}
+      {{> afQuickField name='lastName'}}
+{{> afQuickField name='description' rows=6}}
+    </fieldset>
+  <button type="submit" class="btn btn-primary submitExperience">Submit Profile</button>
+  {{/autoForm}}
+  </div>
+
+</template>
+
+<template name="profileImageView">
+  <div class="imageView">
+    {{#with image}}
+      <div class="uploadedImages">
+        <a href="{{this.url}}" target="_blank"><img src="{{this.url}}" alt="" class="thumbnail" /></a>
+      </div>
+    {{/with}}
+  </div>
 </template>

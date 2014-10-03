@@ -16,22 +16,19 @@ if (Router.current().route.name   === 'experiencePage'  && this.userId == Meteor
     return Images.findOne({'_id':this.experienceMainPhoto._id});// ,{sort: {"createdAt": -1}});
   },
 
+     guide: function () {
+       subs.subscribe('singleGuideWithphoto', this.guideId);
+  //  return Images.findOne(); // Where Images is an FS.Collection instance
+    return Guides.findOne(this.guideId);// ,{sort: {"createdAt": -1}});
+  },
 
-});
+ profileImage: function () {
 
-
-Template.experiencePage.events({
-"click .photo-link": function (e, template) {
-      MeteorCamera.getPicture(function (error, data) {
-        // we have a picture
-        if (!error) {
-          onSuccess(data, template);
-        } else{
-          alert('Error');
-        }
-      });
+     return profileImages.findOne({'_id':this.profilePhoto._id});// ,{sort: {"createdAt": -1}});
     },
+
 });
+
 
 
 

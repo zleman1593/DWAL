@@ -496,3 +496,26 @@ ul.social-buttons li a:active {
 body {
     webkit-tap-highlight-color: grey;
 }
+
+.limitLines{
+    overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+/* line-height: 16px; */
+/* max-height: 32px; */
+-webkit-line-clamp: 4;
+-webkit-box-orient: vertical;
+margin: 20px !important;
+}
+
+
+.img-center{
+display: block;
+width: 100% \9;
+ max-width: 100%; 
+/* height: auto; */
+margin-right: auto;
+margin-left: auto;
+}
+
+}

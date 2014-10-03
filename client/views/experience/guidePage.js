@@ -1,7 +1,7 @@
 var POST_HEIGHT = 250;
 var Positions = new Meteor.Collection(null);
 
-Template.experience.rendered = function() {
+Template.guidePage.rendered = function() {
   if(!Session.get('loadingMore')){
     if (Router.current().route.name    !== 'postPage'){
     Session.set('numberOfNewPost',Session.get('numberOfNewPost')+1);
@@ -29,12 +29,7 @@ var   handler = $('.myElements');
 };
 
 
-Template.experience.helpers({
-
-  image: function () {
-  //  return Images.findOne(); // Where Images is an FS.Collection instance
-    return Images.findOne({'_id':this.experienceMainPhoto._id});// ,{sort: {"createdAt": -1}});
-  },
+Template.guidePage.helpers({
 
 
 
@@ -53,9 +48,9 @@ return 'myElements';
      return Photos.findOne({'_id':this.photoId});// ,{sort: {"createdAt": -1}});
     },*/
 
-     image: function () {
+     profileImage: function () {
 
-     return Photos.findOne({'_id':this.photoId}).image;// ,{sort: {"createdAt": -1}});
+     return profileImages.findOne({'_id':this.profilePhoto._id});// ,{sort: {"createdAt": -1}});
     },
 
 

@@ -28,19 +28,38 @@ AutoForm.hooks({
     before: {
       "post": function(doc, template) {
 
+          place = Session.get("meetLocation");
 
+            var docSubmit = _.extend(doc, {
+                  loc: { type: "Point", coordinates: [ place.geometry.location.B, place.geometry.location.k ] },
+                  experienceMainPhoto: Session.get("imageId"),
+                });
 
-place = Session.get("meetLocation");
-
-var docSubmit = _.extend(doc, {
-      loc: { type: "Point", coordinates: [ place.geometry.location.B, place.geometry.location.k ] },
-      experienceMainPhoto: Session.get("imageId"),
-    });
-
-      	return docSubmit;
-      }
+                  	return docSubmit;
+                  }
     },
+
+
+  /*onSuccess: function(operation, result, template) {
+    console.log("Insert Result: sucess:", result);
+  }, */
+
+  after: {
+      post: function(error, result) {
+        if (error) {
+          alert("Insert Error:", error);
+        } else {
+          //Session.set("InsertResult",result);
+          Router.go("experiencePage",{_id: result});
+        }
+      },
+
+
+
      }
+   }
+
+
 });
 
 Template.addExperience.events({
@@ -52,7 +71,13 @@ Template.addExperience.events({
         //Inserted new doc with ID fileObj._id, and kicked off the data upload using HTTP
       });
     });
-  }
+  },
+/*
+
+'click .submitExperience': function(event, template) {
+Router.go('experiencePage',);
+},*/
+
 });
 
 

@@ -20,6 +20,20 @@ var test = Images.find({experienceId: {$in: postIds}});
 posts,test]
 });
 
+
+
+
+Meteor.publish('singleGuideWithphoto', function(options){
+
+
+var posts = Guides.find(options);
+ var guideId = posts.map(function(p) { return p._id });
+console.log(guideId);
+var test = profileImages.find({guideId: {$in: guideId}});
+  return [
+posts,test]
+});
+
 Meteor.publish('singleImage', function(postId) {
   //return Images.find({});
    return Images.find({experienceId:postId});
@@ -61,6 +75,8 @@ Accounts.onCreateUser(function(options, user) {
  user.plannedFutureExperiences = [];
  user.wishListExperiences = [];
 user.name = '';
+user.guideId = '';
+user.guide = false;
 return user;
 });
 
@@ -69,12 +85,14 @@ return user;
 Meteor.publish("userData", function () {
   if (this.userId) {
     return Meteor.users.find({_id: this.userId},
-                              {fields: {'name': 1,'plannedFutureExperiences': 1, 'wishListExperiences': 1}});
+                              {fields: {'name': 1,'plannedFutureExperiences': 1, 'wishListExperiences': 1, 'guide': 1,'guideId': 1}});
                           
   } else {
     this.ready();
   }
 });
+
+
 
    Accounts.validateLoginAttempt(function(parameters) {
 

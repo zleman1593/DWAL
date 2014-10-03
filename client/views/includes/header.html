@@ -48,8 +48,19 @@
                     </li>
 
                     <li>
+                    {{#if guide}}
+                     <a class="page-scroll navLink blackNavbarLinks btn-success btn-sm becomeGuide" style="
+                   
+             
+                    
+    padding-top: 5px;" href="{{pathFor 'addExperience'}}">Add an Experience</a>
+                    {{else}}
                         <a class="page-scroll navLink blackNavbarLinks btn-success btn-sm becomeGuide" style="
+                   
+             
+                    
     padding-top: 5px;" href="{{pathFor 'guideSignUp'}}">Become a Tour Guide</a>
+    {{/if}}
                     </li>
                       {{/if}}
                 </ul>

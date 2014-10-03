@@ -17,11 +17,12 @@ Session.set("CurrentNumberOfPostsLoaded", Posts.find({}).count());
 
 
 Template.header.helpers({
+guide: function() {
 
-'click .logOut': function(e) {
-    e.preventDefault();
-    Router.go('newPosts');
-Meteor.logout();
+ if (Meteor.user().guide) {
+  return  true;
+} 
+  return false;
 },
 
 searchAppear: function() {
@@ -215,6 +216,10 @@ function initializeAuto() {
   google.maps.event.addListener(autocomplete, 'place_changed', function() {
     var place = autocomplete.getPlace();
     Session.set("selectedLocation", place);
+    if (Router.current().route.name  !== 'nearbyExperiences'){
+      Router.go('nearbyExperiences');
+    }
+
     
 });
 

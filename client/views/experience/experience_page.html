@@ -5,29 +5,29 @@
    <div class="page-header text-center">
   <h1>{{title}}</h1>
   <br>
-  {{#with image}}
-            <img src="{{this.url}}" alt="" class="img-responsive"/>
-       {{/with}}
   <small>{{hourlyRate}}</small>
 </div>
 
     </div>
+    {{#with image}}
+            <img src="{{this.url}}" alt="" class="img-center"/>
+       {{/with}}
    
         <div class="post-content">
                      <p>{{description}}</p>
+            {{#with guide}}
+             <div class="text-center">
+        <p>{{firstName}} {{lastName}}</p>
+           </div>
+        {{#with profileImage}}
+            <img src="{{this.url}}" alt="" class="img-center"/>
+       {{/with}}
+        {{/with}}
+         {{#with guide}}
+        {{description}}
+           {{/with}}
         </div>
 
-  <!--<ul class="ratings">
-    {{#each ratings}}
-      {{> rating}}
-    {{/each}}
-  </ul>
-  
-  {{#if currentUser}}
-    {{> ratingSubmit}}
-  {{else}}
-    <p>Please log in to leave a rating.</p>
-  {{/if}}!-->
 
 </template>
 

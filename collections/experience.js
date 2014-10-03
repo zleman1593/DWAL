@@ -19,8 +19,8 @@ Experience2.attachSchema(new SimpleSchema({
     max: 1000
   },
    hourlyRate: {
-    type: Number,
-    label: "Hourly rate",
+    type: String,
+    label: "Cost Structure",
      max: 500
   },
 
@@ -69,7 +69,7 @@ Meteor.methods({
     // pick out the whitelisted keys
     var post = _.extend(postAttributes, {
       //dates: [],
-      guideId: user._id, 
+      guideId: user.guideId, 
     author: user.name, 
       submitted: new Date().getTime(),
       reviewCount: 0,

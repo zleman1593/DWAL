@@ -1,0 +1,31 @@
+<template name="guidePage">
+ <div class="container" style="margin-top:30px;">
+   <div class="page-header text-center">
+  <h1>{{firstName}} {{lastName}}</h1>
+  <br>
+</div>
+{{#with profileImage}}
+            <img src="{{this.url}}" alt="" class="img-center"/>
+       {{/with}}
+
+    </div>
+   
+        <div class="post-content">
+                     <p>{{description}}</p>
+        </div>
+
+  <!--<ul class="ratings">
+    {{#each ratings}}
+      {{> rating}}
+    {{/each}}
+  </ul>
+  
+  {{#if currentUser}}
+    {{> ratingSubmit}}
+  {{else}}
+    <p>Please log in to leave a rating.</p>
+  {{/if}}!-->
+
+</template>
+
+

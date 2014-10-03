@@ -1,8 +1,13 @@
 <template name="account">
 
 <div class="list-group prefs transparent-header" style="margin-top: 200px">
-          <a href="#" class="list-group-item">Name:  Blank </a>
+          <a href="#" class="list-group-item">Name:  </a>
+          {{#if guide}}
+           <a href="#" class="list-group-item">You are a Guide</a>
+            <a href="#" class="list-group-item">Profile Page  </a>
+           {{/if}}
   <a href="#" class="list-group-item">Email: {{email}}</a>
+
   <!--<a href="#" class="list-group-item"> <button class='logOut btn btn-danger' >Log out</button> <button class='removeAccount btn btn-danger' >Delete Account</button> </a>!-->
 
 </div>

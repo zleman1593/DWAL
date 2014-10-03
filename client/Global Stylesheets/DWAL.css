@@ -3,9 +3,6 @@ width:60%;
 }
 
 
-
-
-
 body{
 
     background-color: aliceblue;
@@ -135,11 +132,11 @@ margin-top: 60px;
     }
 }
 
-
+/*
 body {
   padding: 20px;
 }
-
+*/
 
 .custom-file-input {
   color: transparent;
@@ -174,4 +171,17 @@ body {
 }
 
 
+.js-masonry{
+height:auto;
+
+}
+
+.teaserImage{
+max-width: 300px;
+
+}
+.media{
+max-width: 300px;
+    
+}
 

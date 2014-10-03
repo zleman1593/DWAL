@@ -4,7 +4,7 @@
      <input type="file" class="fileUpload custom-file-input">
      {{>imageView}}
 <label class="control-label" for="title">Meeting Location</label>
-  <div class="location-wrapper"><input type="text" id="formLocationInput" class=" form-control formLocation location input-large input-contrast" autocomplete="off" name="location" placeholder="Meeting location adress or nearby land mark"/> 
+  <div class="location-wrapper"><input type="text" id="formLocationInput" class=" form-control formLocation location input-large input-contrast" autocomplete="off" name="location" placeholder="Meeting location address or nearby landmark"/> 
                </div>
   <!--{{> quickForm collection="Experience2" id="insertExperienceForm" type="method" meteormethod="post"}}!-->
 
@@ -12,9 +12,9 @@
     <fieldset>
       {{> afQuickField name='title'}}
 {{> afQuickField name='description' rows=6}}
-      {{> afQuickField name='hourlyRate'}}
+      {{> afQuickField name='hourlyRate'  rows=6}}
     </fieldset>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary submitExperience">Submit</button>
   {{/autoForm}}
   </div>
 
