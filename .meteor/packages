@@ -23,4 +23,5 @@ meteorhacks:fast-render
 cfs:filesystem
 cfs:ui
 cfs:ejson-file
+natestrauser:x-editable-bootstrap
 

@@ -18,7 +18,7 @@
                 <ul class="nav navbar-nav navbar-right">
                 {{#if searchAppear}}
                     <li >
-                        <div class="location-wrapper"><input type="text" id="pac-input2" class="form-inline-padding location input-large input-contrast" autocomplete="off" name="location" placeholder="Where do you want to go?"/> 
+                        <div class="location-wrapper"><input type="text" id="pac-input3" class="form-inline-padding location input-large input-contrast" autocomplete="off" name="location" placeholder="Where do you want to go?"/> 
                </div>
                     </li>
                        {{/if}}
@@ -26,7 +26,7 @@
 
                    
                      {{#if searchAppear}}
-                        <button   href="{{pathFor 'nearbyExperiences'}}" class="page-scroll navLink whiteNavbarLinks search-button btn btn-search-primary  btn-large" >Search Experiences</button>
+                        <button   href="{{pathFor 'nearbyExperiences'}}" class="page-scroll navLink whiteNavbarLinks search-button exploreButton btn btn-search-primary  btn-large" >Search Experiences</button>
 {{else}}
  <a class="page-scroll navLink  blackNavbarLinks" href="{{pathFor 'nearbyExperiences'}}">Explore Experiences</a>
                          {{/if}}

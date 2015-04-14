@@ -3,7 +3,7 @@ var Positions = new Meteor.Collection(null);
 
 Template.guidePage.rendered = function() {
   if(!Session.get('loadingMore')){
-    if (Router.current().route.name    !== 'postPage'){
+    if (Router.current().route.getName()    !== 'postPage'){
     Session.set('numberOfNewPost',Session.get('numberOfNewPost')+1);
        $('.glyphicon-time').addClass("symbols2");
        $('active').addClass("red");
@@ -134,7 +134,7 @@ comments: function() {
     */
   }
 });
-
+/*
 Template.experience.events({
 
 
@@ -179,4 +179,7 @@ Session.set('previousScrollPosition', tempScrollTop);
     Meteor.call('flagUp', this._id);
   },
 
-  });
+  });*/
+
+
+  

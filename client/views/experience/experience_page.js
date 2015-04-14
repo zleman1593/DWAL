@@ -4,7 +4,7 @@ Template.experiencePage.helpers({
   },
 
   owner: function() {
-if (Router.current().route.name   === 'experiencePage'  && this.userId == Meteor.userId()){
+if (Router.current().route.getName()   === 'experiencePage'  && this.userId == Meteor.userId()){
   return true;
 } else{
     return false;

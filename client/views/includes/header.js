@@ -28,7 +28,7 @@ guide: function() {
 searchAppear: function() {
 
 
-if (Router.current().route.name  !== 'initialMenu'){
+if (Router.current().route.getName()  !== 'initialMenu'){
       $(".logo").addClass("logoStay");
       //$(".logo").removeClass("hideLogo");
 
@@ -47,7 +47,7 @@ $(".logo").removeClass("logoStay");
 },
 permDark: function() {
 
-if (Router.current().route.name  !== 'initialMenu'){
+if (Router.current().route.getName()  !== 'initialMenu'){
   return  'navbar-shrink-perm';
 } 
   return '';
@@ -55,7 +55,7 @@ if (Router.current().route.name  !== 'initialMenu'){
 
 permWhiteText: function() {
 
-if (Router.current().route.name  !== 'initialMenu'){
+if (Router.current().route.getName()  !== 'initialMenu'){
   return  'whiteNavbarLinks';
 } 
   return '';
@@ -72,7 +72,7 @@ return !! Meteor.userId();
 largeDetail: function() {
 
 
-if (Router.current().route.name  === 'postPage' || Router.current().route.name   === 'pref'){
+if (Router.current().route.getName()  === 'postPage' || Router.current().route.getName()   === 'pref'){
   return 'hide-nav-things';
 } 
 
@@ -86,13 +86,13 @@ if (Router.current().route.name  === 'postPage' || Router.current().route.name  
     args.pop();
     
     var active = _.any(args, function(name) {
-      return Router.current() && Router.current().route.name === name
+      return Router.current() && Router.current().route.getName() === name
     });*/
     
-if (Router.current().route.name    === 'postPage'){
+if (Router.current().route.getName()    === 'postPage'){
 
   return 'Confession Details';
-} else if (Router.current().route.name   === 'pref'){
+} else if (Router.current().route.getName()   === 'pref'){
     return 'Preferences';
   }
   return '';
@@ -118,7 +118,7 @@ $( ".glyphicon-chevron-left").on( "touchstart", notify );*/
       return Router.current() && Router.current().route.name === name
     });*/
     
-if (Router.current().route.name    === 'postPage' || Router.current().route.name    === 'pref'){
+if (Router.current().route.getName()    === 'postPage' || Router.current().route.getName()    === 'pref'){
 
   return false;
 } else{
@@ -132,7 +132,7 @@ if (Router.current().route.name    === 'postPage' || Router.current().route.name
     args.pop();
     
     var active = _.any(args, function(name) {
-      return Router.current() && Router.current().route.name === name
+      return Router.current() && Router.current().route.getName() === name
     });
     
     return active && 'active';
@@ -211,12 +211,12 @@ function doSomething() {
 
 
 function initializeAuto() {
-  var input = ( document.getElementById('pac-input2'));
+  var input = ( document.getElementById('pac-input3'));
   var autocomplete = new google.maps.places.Autocomplete(input);
   google.maps.event.addListener(autocomplete, 'place_changed', function() {
     var place = autocomplete.getPlace();
     Session.set("selectedLocation", place);
-    if (Router.current().route.name  !== 'nearbyExperiences'){
+    if (Router.current().route.getName()  !== 'nearbyExperiences'){
       Router.go('nearbyExperiences');
     }
 

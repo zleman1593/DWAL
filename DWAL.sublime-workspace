@@ -1,0 +1,348 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"lay",
+				"layoutTemplate"
+			],
+			[
+				"op",
+				"option	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 347.0,
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"jsl",
+				"JSLint"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/zackleman/Documents/Current Projects/DWAL"
+	],
+	"file_history":
+	[
+		"/Users/zackleman/Dropbox/Apps/Brace/index.html",
+		"/Users/zackleman/Downloads/rawSchools.txt",
+		"/Users/zackleman/Desktop/confessPhone/client/stylesheets/style.css",
+		"/Users/zackleman/Desktop/CampusConfess3/smart.lock",
+		"/Users/zackleman/Desktop/a71c8a3987dc655609158a073b01beb412676ad1/package.js",
+		"/Users/zackleman/Desktop/a71c8a3987dc655609158a073b01beb412676ad1/LICENSE",
+		"/Users/zackleman/Desktop/a71c8a3987dc655609158a073b01beb412676ad1/README.md",
+		"/Users/zackleman/Desktop/a71c8a3987dc655609158a073b01beb412676ad1/smart.json",
+		"/Users/zackleman/Desktop/a71c8a3987dc655609158a073b01beb412676ad1/TODO.md",
+		"/Users/zackleman/Desktop/a71c8a3987dc655609158a073b01beb412676ad1/HISTORY.md",
+		"/Users/zackleman/Desktop/a71c8a3987dc655609158a073b01beb412676ad1/versions.json",
+		"/Users/zackleman/Desktop/CampusConfess3/.meteor/versions",
+		"/Users/zackleman/Desktop/CampusConfess3/.meteor/packages",
+		"/Users/zackleman/Desktop/CampusConfessTest/smart.lock",
+		"/Users/zackleman/Desktop/CampusConfessTest/.meteor/packages",
+		"/Users/zackleman/Downloads/meteor-momentum-master/lib/velocity/velocity.ui.js",
+		"/Users/zackleman/Downloads/meteor-momentum-master/example/example.js",
+		"/Users/zackleman/Downloads/meteor-momentum-master/example/example.html",
+		"/Users/zackleman/Downloads/Microscope-87922a896d394465fd1fd9737120bc4ae0c57b5d/.meteor/packages",
+		"/Users/zackleman/Desktop/CampusConfessTest/.meteor/versions",
+		"/Users/zackleman/Desktop/CampusConfess3/client/views/includes/header.html",
+		"/Users/zackleman/Desktop/CampusConfess3/lib/permissions.js",
+		"/Users/zackleman/Desktop/CampusConfess3/lib/router.js",
+		"/Users/zackleman/Desktop/CampusConfess/lib/router.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/experimental/touche.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/helpers/config.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/LandingPage/rimages.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/main.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/jquery.timeago.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/Transitions/elementTransitions.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/application/rimages.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/comments/comment_submit.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/comments/comment.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/includes/header.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/includes/pref.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/notifications/notifications.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/application/layout.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/posts/post_item.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/posts/post_page.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/posts/post_submit.js",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/posts/post_edit.js",
+		"/Users/zackleman/Desktop/CampusConfess/collections/posts.js",
+		"/Users/zackleman/Desktop/CampusConfess/server/publications.js",
+		"/Users/zackleman/Desktop/CampusConfess/server/fixtures.js",
+		"/Users/zackleman/Desktop/CampusConfess/lib/permissions.js",
+		"/Users/zackleman/Desktop/CampusConfess2/lib/router.js",
+		"/Users/zackleman/Desktop/death/client/LandingPage/index.html",
+		"/Users/zackleman/Desktop/CampusConfess/client/main.html",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/includes/header.html",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/comments/comment_submit.html",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/includes/pref.html",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/application/layout.html",
+		"/Users/zackleman/Desktop/CampusConfess/client/stylesheets/style.css",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/comments/comment.html",
+		"/Users/zackleman/Desktop/CampusConfess/client/views/posts/post_item.html",
+		"/Users/zackleman/.meteorite/packages/single-page-login/EtherPOS/single-page-login/7674b7771781e575a054bff1267fc38c0d48b796/client/single_page_login.js",
+		"/Users/zackleman/.meteorite/packages/single-page-login/EtherPOS/single-page-login/7674b7771781e575a054bff1267fc38c0d48b796/shared/SinglePageLogin.js",
+		"/Users/zackleman/.meteorite/packages/single-page-login/EtherPOS/single-page-login/7674b7771781e575a054bff1267fc38c0d48b796/client/helpers.js",
+		"/Users/zackleman/Desktop/confessPhone2/client/views/about.html",
+		"/Users/zackleman/Desktop/confessPhone2/client/views/posts/post_page.html",
+		"/Users/zackleman/Downloads/supporter/client/views/needs/newNeed.html",
+		"/Users/zackleman/Desktop/confessPhone3/smart.json",
+		"/Users/zackleman/Desktop/confessPhone2/smart.json",
+		"/Users/zackleman/.meteorite/packages/iron-router/EventedMind/iron-router/d1ffb3f06ea4c112132b030f2eb1a70b81675ecb/versions.json",
+		"/Users/zackleman/Desktop/Microscope-973859128a9bb0950677effd6bd2b38083b5e740/.meteor/release",
+		"/Users/zackleman/Desktop/confessPhone/.meteor/release",
+		"/Users/zackleman/Documents/Current Projects/meteor-mobile-demo/devshop-demo.css",
+		"/Users/zackleman/Documents/Current Projects/meteor-mobile-demo/client/routes.js",
+		"/Users/zackleman/Desktop/ISDGI/js/agency.js",
+		"/Users/zackleman/Desktop/favor/client/views/posts/posts_list.js",
+		"/Users/zackleman/Desktop/favor/client/views/posts/posts_list.html",
+		"/Users/zackleman/Downloads/Amoeba/favor/tester.html",
+		"/Users/zackleman/Downloads/Amoeba/favor/index.html",
+		"/Users/zackleman/Downloads/Amoeba/favor/intro.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Bowdoin College",
+			"new hamps",
+			"add",
+			"slideupless",
+			"slidupless",
+			"20",
+			"slidup",
+			"150",
+			"slideUp",
+			"body",
+			"vanishOut",
+			"layout",
+			"iron",
+			"discuss",
+			"termsOfService",
+			"right",
+			"fade",
+			"startPage",
+			"upvota",
+			"glyphicon",
+			"footer",
+			"removalRequest",
+			"school",
+			"nav-collapse",
+			"domain",
+			"msg",
+			"alert",
+			"Alert",
+			"yieldte",
+			"src",
+			"img",
+			"router",
+			"Session",
+			"templa",
+			"servic",
+			"logo",
+			"team",
+			"img3",
+			"studnets",
+			"magic"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"16",
+			"20",
+			"slideUpLess",
+			"tinLeftOut"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 34.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "DWAL.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

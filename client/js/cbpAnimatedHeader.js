@@ -30,7 +30,7 @@
 		if ( sy >= changeHeaderOn ) {
 	
 		
-		if (Router.current().route.name  === 'initialMenu'){
+		if (Router.current().route.getName()  === 'initialMenu'){
 			//$(".logo").addClass("hideLogo");
 			$(".logo").addClass("logoStay");
 		} 
@@ -44,7 +44,7 @@
 		else {
 			//$(".logo").removeClass("hideLogo");
 			
-			if (Router.current().route.name  === 'initialMenu'){
+			if (Router.current().route.getName()   === 'initialMenu'){
 				$(".logo").removeClass("logoStay");
 				$(".navLink").addClass("blackNavbarLinks");
 			$(".navLink").removeClass("whiteNavbarLinks")

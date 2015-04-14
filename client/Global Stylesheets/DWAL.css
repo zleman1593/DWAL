@@ -185,3 +185,36 @@ max-width: 300px;
     
 }
 
+.experience-description{
+
+  line-height: 2.75;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+ input#pac-input3 {
+min-width: 100%;
+}
+.exploreButton{
+display:none;
+}
+
+}
+
+@media only screen and (min-width: 769) {
+    input#pac-input3 {
+min-width: 400px;
+
+width: 40%;
+
+}
+}
+
+#pac-input3:focus {
+        border-color: #4d90fe;
+        //margin-left: -1px;
+        //padding-left: 14px;  /* Regular padding-left + 1. */
+        //width: 401px;
+      }
